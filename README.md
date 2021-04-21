@@ -25,11 +25,11 @@ Notification must be sent when a new report is available.
 
 List the dependencies of the Analysis-functionality.
 
-1. Access to the Server containing the telemetrics in a csv file
-2. Csv file read access support 
-3. Email notification dependency, Users information fetch( Email ID's) configeration feature shall be enabled before Tests
-4. File conversion libraries integration
-5. Continous data analysis and loggin plugin like jenkins etc..
+1. Access to the Server containing the telemetrics in a csv file.
+2. Csv file read access support.
+3. Email notification dependency, Users information fetch( Email ID's) configeration feature shall be enabled before Tests.
+4. File conversion libraries integration.
+5. Continous data analysis and data logging plugin like jenkins etc..
 
 (add more if needed)
 
@@ -56,15 +56,16 @@ Add to these tests:
 2. Write "Invalid input" to the PDF when the csv doesn't contain expected data
 3. To test if email triggering is working fine.
 4. To Test if system timing and logging is according to expecations.
-5. To check if the report generation is successfull
+5. To check if the report generation is successfull.
 6. False positive check done to see when server is inaccessible how the system behaves. Give a non working server as input to testcase and check the behaviour in this case.
-7. Breach information tests when not within limits
-8. Make the system fail by introducing false breaches to the system to check the software 
-9. When the report is generated valid stake holders are notified timely-> Testcase to handle this.
-10. Acceptance tests for positive usecases
+7. Breach information tests when not within limits.
+8. Make the system fail by introducing false breaches to the system to check the software.
+9. When the report is generated valid stake holders are notified timely-> Testcase to see post report generation the delivrables are delivered correctly.
+10. Acceptance tests for positive usecases of the requirement. behaviour during no breaches shall be verified.
 11. Test during missing inputs. -> Write a testcase to inform users regarding missing inputs like email ID or sensors not workinge etc.
 12. Pre-Requisitis testing check testcase. FOr the feature to run mandatory pre-requisitis check, like data loggers etc shall be checked and if not present users shall be informed with test reports if not present.
-13. Regressive testcase. Calculate the behavrious by running function cyclically for every 30mins for all usecases
+13. Regressive testcase(Stress Tests). Calculate the behavrious by running function cyclically for every 30mins for all usecases.
+14. Static Tests from Ranging from Experience review to Walkthrough review to come up with past failure and creation of tests for the same.
 
 (add more)
 
