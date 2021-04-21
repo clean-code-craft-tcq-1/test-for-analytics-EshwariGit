@@ -27,8 +27,10 @@ Notification must be sent when a new report is available.
 List the dependencies of the Analysis-functionality.
 
 1. Access to the Server containing the telemetrics in a csv file
-1. _enter dependency
-1. _enter dependency
+2. Csv file read access support 
+3. Email notification dependency, Users information fetch( Email ID's) configeration feature shall be enabled before Tests
+4. File conversion libraries integration
+5. Continous data analysis and loggin plugin like jenkins etc..
 
 (add more if needed)
 
@@ -52,9 +54,18 @@ Write tests in the form of `<expected output or action>` from `<input>` / when `
 Add to these tests:
 
 1. Write minimum and maximum to the PDF from a csv containing positive and negative readings
-1. Write "Invalid input" to the PDF when the csv doesn't contain expected data
-1. _enter a test
-1. _enter a test
+2. Write "Invalid input" to the PDF when the csv doesn't contain expected data
+3. To test if email triggering is working fine
+4. To Test if system timing and logging is according to standards.
+5. To check if the report generation is successfull
+6. False positive check done to see when server is inaccessible how the system behaves. Give a non working server as input to testcase and check the behaviour in this case.
+7. Breach information tests when not within limits
+8. Make the system fail by introducing false breaches to the system to check the software 
+9. When the report is generated valid stake holders are notified timely-> Testcase to handle this.
+10. Acceptance tests for all positive usecases
+11. Test during missing inputs. -> Write a testcase to inform users regarding missing inputs like email ID or sensors not workinge etc.
+12. Pre-Requisitis testing check testcase. FOr the feature to run mandatory pre-requisitis check, like data loggers etc shall be checked and if not present users shall be informed with test reports.
+13. Regressive testcase. Calculate the behavrious by running function cyclically for all usecases
 
 (add more)
 
@@ -72,4 +83,4 @@ Notify report availability | pdf file     | report notification via Email|mock t
 Report inaccessible server | server error reading | report server connection problem               | fake the inaccessible server handling function
 Find minimum and maximum   | csv file  | comparision between mininum maximum and expected value               | None - it's a pure function
 Detect trend               | csv file  | output trend measured with timestamp             | None - it's a pure function
-Write to PDF               | html logs, .rtf( Rich Text format)  | All deliverable artifacts of "Trend analysis" and "minimum and maximum logged per time stamp" | fake the Pdf converter 
+Write to PDF               | html logs, .rtf( Rich Text format), csf conversion  | All deliverable artifacts of "Trend analysis" and "minimum and maximum logged per time stamp" | fake the Pdf converter 
